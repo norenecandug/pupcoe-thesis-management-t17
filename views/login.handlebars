@@ -1,0 +1,79 @@
+<body>
+<!-- Header -->
+<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:  #FF7C4C;">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/home"><img src="mm.jpg" style="width: 80px; height: 80px;"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+</nav>
+<!-- End of Header -->
+<!-- Landing Page -->
+
+		<div class="bg-image"> </div>
+	<section class="intro">
+		<div class="inner">
+			<div class="content">
+				<h2>Welcome to PUP Computer Engineering Thesis Management System.</h2>
+
+								<button class="btn" onclick="document.getElementById('modal-wrapper').style.display='block'">Login</button>
+				<!-- Modal for Log-in -->
+				<div class="modal text-center" id="modal-wrapper">
+					<div class="col-sm-8 main-section">
+						<div class="modal-content animate">
+							
+							<div class="col-12 user-img">
+								<span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+								</div>
+							
+							<form method="POST" action='login' role="login">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" id="inputEmail" name="email" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control input-lg" id="inputPassword" placeholder="Password" required="" />
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-7">
+                      <input type="checkbox" tabindex="3" name="remember" id="remember">
+                      <label for="remember"> Remember Me</label>
+                    </div>
+                    <div class="col-xs-5 pull-right">
+                      <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="LogIn">
+                    </div>
+                  </div>
+                </div>
+
+   
+            </div>
+          </ul>
+        </li>
+		</form>
+						</div> <!-- End of Modal Content -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- Ending of Landing Page -->
+<!-- Jumbotron -->
+<div class="container-fluid">
+	<div class="row jumbotron">
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+			<p class="lead">Bachelor of Science in Computer Engineering (BSCOE) <br>  <br>
+The Bachelor of Science in Computer Engineering (BSCoE) program provides basic background in science and engineering. The program emphasizes the fundamental concepts of the theory and use of electronics and electricity, analog and digital components, the analysis and design of digital computer hardware and the techniques required in order to interface a microprocessor to memories, input-output ports and other device or to other microprocessors. The design includes the software tools required by the applications. Computer data communications and emerging technologies such as digital signal processing, computer control and automation, computer network and electives complement the specialization, giving the students the ability to design and optimize pure digital and analog / digital hybrid circuits in technical applications and in networking.
+
+The program prepare students for careers in professional computer engineering and for leading roles in the design, analyses and applications of computing structures that involve hardware, software or both. The students must have strong foundation in the basic physical and engineering sciences to develop and/or upgrade information and communications technology.</p>
+		</div>
+	</div>
+</div>
+<!-- Ending of Jumbotron -->
+
+
+
