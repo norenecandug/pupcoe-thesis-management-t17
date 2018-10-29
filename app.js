@@ -64,7 +64,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Initialize Passport and restore authentication state, if any, from the
 // session.
-app.use(session({ secret: 'kahitAnoIto', resave: false, saveUninitialized: false }));
+app.use(session({ secret: 'pupcoe', resave: false, saveUninitialized: false }));
 app.use(passport.initialize());
 app.use(passport.session());
 
