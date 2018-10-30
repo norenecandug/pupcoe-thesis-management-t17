@@ -1,20 +1,20 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Set Schedule and Panel</h1>
+  <h1 class="h2" style="margin-left: 25%;">Set Schedule and Panel</h1>
 </div>
 <div>
-  <h2 class='h3'>Thesis Name: {{data.title}}</h2>
-  <h2 class='h4'>Defense ID: {{data.id}}</h2>
-  <h2 class='h4'>Abstract: {{data.abstract}}</h2>
-  <h2 class='h4'>Group Number: {{data.group_id}}</h2>
+  <h2 class='h3' style="margin-left: 25%;">Thesis Name: {{data.title}}</h2>
+  <p style="margin-left: 25%;">Defense ID: {{data.id}}</p>
+  <p style="margin-left: 25%;">Abstract: {{data.abstract}}</p>
+  <p style="margin-left: 25%;">Group Number: {{data.group_id}}</p>
 </div>
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Set Schedule and Panel</h1>
+  <h1 class="h2" style="margin-left: 25%;">Set Schedule and Panel</h1>
 </div>
 <div>
   <div class='row'>
     <div class='col-md-8'>
-      <form class="needs-validation" novalidate="" action="/faculty/{{defense_type}}/set-sched-and-panel/{{data.id}}" method="POST">
+      <form class="needs-validation" novalidate="" action="/faculty/{{defense_type}}/set-sched-and-panel/{{data.id}}" method="POST" style="margin-left: 25%;">
         <div class="mb-3">
           <label for="schedule">Schedule</label>
           <input type="text" class="form-control" id="schedule" placeholder="Dec. 25, 2018" required="" name="schedule">

@@ -1379,8 +1379,8 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 .main {
-  position: relative;
-  background: #FFFFFF; }
+ border:1px solid #000; height:700px; margin-left: 200px;
+    padding:10px; }
 
 /* Animations */
 .nav-pills .nav-link,
