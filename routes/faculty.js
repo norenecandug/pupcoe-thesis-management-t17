@@ -34,7 +34,11 @@ router.get('/class/:classId', function(req, res, next) {
       .then((classData) => {
         console.log('class', classData)
         Class.getStudentsByClassId(req.params.classId).then((classStudents)=> {
-          res.render('faculty/class_detail', { layout: 'faculty', classData: classData, classStudents: classStudents });
+          res.render('faculty/class_detail', { 
+		  layout: 'faculty',
+		  classData: classData,
+		  classStudents: classStudents 
+		  });
         })
       })
   } else {
