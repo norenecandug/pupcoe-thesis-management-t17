@@ -1,11 +1,12 @@
+
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Add Faculty</h1>
+  <h1 class="h2" style="margin-left: 25%">Add Faculty</h1>
 </div>
 <div>
 <div class='row'>
   <div class='col-md-8'>
 
-        <form class="needs-validation" novalidate="" action="/admin/faculty-create" method="POST">
+        <form class="needs-validation" novalidate="" action="/admin/faculty-create" method="POST" style="margin-left: 40%" >
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
@@ -68,3 +69,26 @@
 
 
 </div>
+
+    </main>
+
+ <!--   Core JS Files   -->
+  <script src="../js/core/jquery.min.js"></script>
+  <script src="../js/core/popper.min.js"></script>
+  <script src="../js/core/bootstrap.min.js"></script>
+  <script src="../js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../js/now-ui-dashboard.min.js?v=1.2.0" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>

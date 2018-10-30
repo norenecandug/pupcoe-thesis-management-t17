@@ -1,116 +1,112 @@
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<!DOCTYPE>
+<html>
+	<head>
+	<title> BSCpE Thesis Management </title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/fontawesome-all.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.js"></script>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/now-ui-dashboard.css?v=1.2.0" rel="stylesheet" />
 
-    <title>PUP-COE Thesis Management</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-    <link href="/stylesheets/dashboard.css" rel="stylesheet">
-  </head>
-
-  <body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"> <img src="/images/pupcoe-logo.png" width="30" height="30" alt=""> Admin</a>
-      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-          <a class="nav-link" href="/logout">Sign out</a>
-        </li>
-      </ul>
-    </nav>
-    <div class='container-fluid'>
-      <div class='row'>
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-        <div class="sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="/admin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                Dashboard
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/faculties">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                Faculties
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/committee">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                Committee
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/students">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                Students
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/classes">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                Classes
-              </a>
-            </li>
-            {{!-- start here --}}
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/thesis">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                Thesis Proposals
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/mor">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                Methods of Research Defense
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/dp1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                Design Project I Defense
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/dp2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                Design Project II Defense
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/finished">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                Finished Theses
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
+ <body>
+  <div class="wrapper ">
+    <div class="sidebar" data-color="orange">
+      
+      <div class="logo">
+        </a>
+        <a href="/" class="simple-text logo-normal">
+          BSCpE Thesis Management
+        </a>
       </div>
-
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li>
+            <a href="/admin">
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a href="/admin/faculties">
+              <p>Faculties</p>
+            </a>
+          </li>
+		  <li>
+            <a href="/admin/committee">
+              <p>Committee</p>
+            </a>
+          </li>
+		  
+          <li>
+            <a href="/admin/students">
+              <p>Students</p>
+            </a>
+          </li>
+		  <li>
+            <a href="/admin/classes">
+              <p>Classes</p>
+            </a>
+          </li>
+		  <li>
+            <a href="/admin/thesis">
+              <p>Thesis Proposals</p>
+            </a>
+          </li>
+		  <li>
+            <a href="/admin/mor">
+              <p>MOR Defense</p>
+            </a>
+          </li>
+		  <li>
+            <a href="/admin/dp1">
+              <p>DP-I Defense </p>
+            </a>
+          </li>
+		  <li>
+            <a href="/admin/dp2">
+              <p>DP-II Defense </p>
+            </a>
+          </li>
+		  <li>
+            <a href="/admin/finished">
+              <p>Completed Thesis</p>
+            </a>
+          </li>
+          
+<li>
+            <a href="/logout">
+              <p>Logout</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+</div></div></div></div></div>
 
+<main>
       {{{body}}}
-    </main>
+	  
+	  </main>
 
+ <!--   Core JS Files   -->
+  <script src="./js/core/jquery.min.js"></script>
+  <script src="./js/core/popper.min.js"></script>
+  <script src="./js/core/bootstrap.min.js"></script>
+  <script src="./js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Chart JS -->
+  <script src="./js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="./js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./js/now-ui-dashboard.min.js?v=1.2.0" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-<script src="/javascripts/bootstrap.min.js"></script>
-<script src="/javascripts/scripts.js"> </script>
-
-</body></html>
+    });
+  </script>
