@@ -88,7 +88,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 1004;
 app.listen(port, function () {
   console.log('Server started at port ' + port);
 });
