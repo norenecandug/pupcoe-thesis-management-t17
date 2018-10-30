@@ -65,7 +65,63 @@ var User = {
       });
     });
     return promise;
+  },
+  noGroupList: () => {
+    const query = `
+      SELECT *
+      FROM users
+      WHERE user_type = 'student' AND id NOT IN (SELECT DISTINCT student_id FROM group_members)
+    `;
+    var promise = new Promise((resolve, reject) => {
+      db.query(query, (req, data) => {
+        if (data && data.rowCount) {
+          resolve(data.rows);
+        } else {
+          resolve([]);  
+        }
+      });
+    });
+    return promise;
   },  
+
+  // create no committee list
+
+  notCommitteeList: () => {
+    const query = `
+      SELECT *
+      FROM users
+      WHERE user_type = 'faculty' AND id NOT IN (SELECT DISTINCT faculty_id FROM committee_members)
+    `;
+    var promise = new Promise((resolve, reject) => {
+      db.query(query, (req, data) => {
+        if (data && data.rowCount) {
+          resolve(data.rows);
+        } else {
+          resolve([]);
+        }
+      });
+    });
+    return promise;
+  },
+
+  listCommittee: () => {
+    const query = `
+      SELECT *
+      FROM users
+      WHERE user_type = 'faculty' AND id IN (SELECT DISTINCT faculty_id FROM committee_members)
+    `;
+    var promise = new Promise((resolve, reject) => {
+      db.query(query, (req, data) => {
+        if (data && data.rowCount) {
+          resolve(data.rows);
+        } else {
+          resolve([]);
+        }
+      });
+    });
+    return promise;
+  },
+  
   create: (userData, type) => {
     // check first if user with given email already exists
     const promise = new Promise((resolve, reject) => {

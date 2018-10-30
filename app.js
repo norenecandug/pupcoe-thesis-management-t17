@@ -4,11 +4,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const exphbs = require('express-handlebars');
-const bcrypt = require('bcryptjs');
 
 // models
 const User = require('./models/user');
-
 
 // required for passport
 const passport = require('passport');
@@ -47,7 +45,6 @@ passport.deserializeUser(function(id, cb) {
   });
 });
 
-
 // instantiate app
 const app = express();
 
@@ -61,10 +58,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 // Initialize Passport and restore authentication state, if any, from the
 // session.
-app.use(session({ secret: 'pupcoe', resave: false, saveUninitialized: false }));
+app.use(session({ secret: 'kahitAnoIto', resave: false, saveUninitialized: false }));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -75,7 +71,6 @@ app.use('/admin', adminRouter);
 app.use('/student', studentRouter);
 app.use('/faculty', facultyRouter);
 app.use('/api', apiRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -93,9 +88,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
-
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8000;
 app.listen(port, function () {
   console.log('Server started at port ' + port);
 });

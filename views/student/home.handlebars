@@ -2,7 +2,32 @@
   <h1 class="h2">Home</h1>
 </div>
 <div>
-  <h5>Name: {{user.first_name}} {{user.last_name}}</h5>
-  <h5>Class: {{user.batch}}-{{user.section}}</h5>
-  <h5>Adviser: {{user.adviser_fname}} {{user.adviser_lname}}</h5>
+  <h2 class='h3'>Name: {{first_name}} {{last_name}}</h2>
+  <h2 class='h4'>Class: {{user.batch}}-{{user.section}}</h2>
+  <h2 class='h4'>Adviser: {{user.adviser_fname}} {{user.adviser_lname}}</h2>
+  <h2 class='h4'>Group Number: {{groupId}}</h2>
+  <h2 class='h4'>Group Name: {{groupName}}</h2>
+  <h2 class='h4'>Group Members </h2>
+  <table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Student Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each group_members}}
+    <tr>
+      <th scope="row">{{this.student_number}}</th>
+      <td>{{this.first_name}} {{this.last_name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phone}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+  
+  
 </div>
